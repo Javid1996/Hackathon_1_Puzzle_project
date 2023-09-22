@@ -1,0 +1,43 @@
+body{
+     display: flex; 
+    justify-content:space-around;
+    text-align: center;
+ 
+}
+
+#main_sector{
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    justify-content: space-between;
+
+}
+#block ,#left, #right{
+    border:solid 2px maroon;
+   
+}
+
+#block{
+    height: 400px;
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+}
+
+#left{
+ height :200px;
+ width: 200px;
+}
+
+#right{
+    height: 200px;
+    width: 600px;
+}
+
+#block > img{
+width: 200px;
+height: 200px;
+}
