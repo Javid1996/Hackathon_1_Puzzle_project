@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding:0;
+
+}
 body{
      display: flex; 
     justify-content:space-around;
@@ -12,6 +17,7 @@ body{
     text-align: center;
     align-content: center;
     justify-content: space-between;
+    height: 100vh;
 
 }
 #block ,#left, #right{
@@ -27,17 +33,32 @@ body{
     margin: 20px auto;
 }
 
+#block > img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    }
+
 #left{
  height :200px;
  width: 200px;
 }
 
-#right{
+#left img{
     height: 200px;
-    width: 600px;
+    width: 200px;
 }
 
-#block > img{
-width: 200px;
-height: 200px;
+#right{
+    height: 400px;
+    width: 605px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
 }
+
+#right > img{
+    width: 200px;
+    height: 200px;
+    border: 1px solid grey;
+    }
