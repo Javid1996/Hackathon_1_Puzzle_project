@@ -1,9 +1,24 @@
 let puzzlePieces = []
 let columns = 3;
-let raws = 3;
+let rows = 3;
 
 
-for(let i=1; i<=columns*raws; i++){
+
+for(let i = 0 ; i< columns; i++){
+    for( let j = 0 ; j<rows; j++){
+        let element= document.createElement("img");
+        element.src="./img/whiteScreen.jpg"
+
+        document.getElementById('block').append(element);
+    }
+}
+
+
+
+
+
+
+for(let i=1; i<=columns*rows; i++){
     
     puzzlePieces.push(i.toString())
 }
@@ -25,21 +40,62 @@ for(let piece of puzzlePieces){
 
     let element = document.createElement("img");
     element.src = "./img/" + piece + ".jpg";
-    let mixed_block = document.getElementById("mixed_block");
+    
     // mixed_block.appendChild(piece);
-    mixed_block.appendChild(element);
+    
 
-    element.addEventListener('dragstart',dragStart);
+    element.addEventListener("dragstart",dragStart);
     element.addEventListener('dragend',dragEnd);
     element.addEventListener('dragenter',dragEnter);
     element.addEventListener("dragleave" ,dragLeave);
     element.addEventListener('dragover',dragOver);
-    element.addEventListener('dragdrap',dragDrop);
+    element.addEventListener('drop',dragDrop);
+
+    // element.addEventListener("dragstart", dragStart); 
+    // element.addEventListener("dragover", dragOver);   
+    // element.addEventListener("dragenter", dragEnter); 
+    // element.addEventListener("dragleave", dragLeave); 
+    // element.addEventListener("dragdrop", dragDrop);       
+    // element.addEventListener("dragend", dragEnd);      
+
+
+    let mixed_block = document.getElementById("mixed_block");
+    mixed_block.appendChild(element);
+
+
 
 
 
 }
+let activeElement;
+function dragStart(event) {
+    activeElement=this; 
+}
+function dragOver(event){
+    event.preventDefault()
+}
+function dragEnter(event){
+    event.preventDefault()
+}
+function dragLeave(){
 
+} 
+
+
+let passiveElement ;
+function dragDrop(){
+    passiveElement=this;
+}
+
+let turns = 0;
+function dragEnd(){
+    let activeImg= activeElement.src;
+    let passiveImg= passiveElement.src;
+    passiveElement=activeImg;
+    activeElement=passiveImg;
+    turns+=1;
+    document.getElementById('turnsCounter').innerText = turns;
+}
 
 
 
