@@ -18,7 +18,7 @@ body{
     text-align: center;
     align-content: center;
     justify-content: space-between;
-    height: 100vh;
+    height: 90vh;
     width: 70%;
 
 }
@@ -53,14 +53,14 @@ body{
 
 #mixed_block{
     height: 400px;
-    width: 1000px;
+    width: 1200px;
     display: flex;
     flex-wrap: wrap;
     margin: 5px;
 }
 
 #mixed_block > img{
-    width: 198px;
-    height: 198px;
+    width: 168px;
+    height: 168px;
     border: 1px solid grey;
     }

@@ -9,13 +9,16 @@ for(let i = 0 ; i< columns; i++){
         let element= document.createElement("img");
         element.src="./img/whiteScreen.jpg"
 
+        element.addEventListener("dragstart",dragStart);
+        element.addEventListener('dragend',dragEnd);
+        element.addEventListener('dragenter',dragEnter);
+        element.addEventListener("dragleave" ,dragLeave);
+        element.addEventListener('dragover',dragOver);
+        element.addEventListener('drop',dragDrop);
+        
         document.getElementById('block').append(element);
     }
 }
-
-
-
-
 
 
 for(let i=1; i<=columns*rows; i++){
@@ -45,7 +48,7 @@ for(let piece of puzzlePieces){
     
 
     element.addEventListener("dragstart",dragStart);
-    element.addEventListener('dragend',dragEnd);
+    element.addEventListener("dragend",dragEnd);
     element.addEventListener('dragenter',dragEnter);
     element.addEventListener("dragleave" ,dragLeave);
     element.addEventListener('dragover',dragOver);
@@ -63,12 +66,9 @@ for(let piece of puzzlePieces){
     mixed_block.appendChild(element);
 
 
-
-
-
 }
 let activeElement;
-function dragStart(event) {
+function dragStart() {
     activeElement=this; 
 }
 function dragOver(event){
@@ -91,8 +91,9 @@ let turns = 0;
 function dragEnd(){
     let activeImg= activeElement.src;
     let passiveImg= passiveElement.src;
-    passiveElement=activeImg;
-    activeElement=passiveImg;
+    activeElement.src=passiveImg;
+    passiveElement.src=activeImg;
+    
     turns+=1;
     document.getElementById('turnsCounter').innerText = turns;
 }
