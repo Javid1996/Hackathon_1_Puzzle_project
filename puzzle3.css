@@ -28,16 +28,16 @@ body{
 }
 
 #block{
-    height: 540px;
-    width: 810px;
+    height: 600px;
+    width: 1080px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
 }
 
 #block > img{
-    width: 88px;
-    height: 88px;
+    width: 118px;
+    height: 98px;
     border: 1px solid grey;
     }
 
