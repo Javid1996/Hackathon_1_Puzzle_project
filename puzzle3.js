@@ -1,6 +1,6 @@
 let puzzlePieces = []
-let columns = 6;
-let rows = 4;
+let columns = 9;
+let rows = 6;
 
 
 
@@ -42,7 +42,7 @@ for(let i = 0; i<puzzlePieces.length; i++ ){
 for(let piece of puzzlePieces){
 
     let element = document.createElement("img");
-    element.src = "./img/img2/" + piece + ".jpg";
+    element.src = "./img/img3/" + piece + ".jpg";
     
     // mixed_block.appendChild(piece);
     

@@ -28,28 +28,28 @@ body{
 }
 
 #block{
-    height: 500px;
-    width: 750px;
+    height: 540px;
+    width: 810px;
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
 }
 
 #block > img{
-    width: 123px;
-    height: 123px;
+    width: 88px;
+    height: 88px;
     border: 1px solid grey;
     }
 
 #left{
  height :300px;
- width: 330px;
+ width: 450px;
  margin-top: 30px;
 }
 
 #left img{
     height: 300px;
-    width: 330px;
+    width: 450px;
 }
 
 form{
@@ -81,15 +81,15 @@ button {
   }
 
 #mixed_block{
-    height: 200px;
-    width: 1200px;
+    height: 150px;
+    width: 1350px;
     display: flex;
     flex-wrap: wrap;
     margin: 3px;
 }
 
 #mixed_block > img{
-    width: 98px;
-    height: 98px;
+    width: 73px;
+    height: 48px;
     border: 1px solid grey;
     }
