@@ -52,6 +52,34 @@ body{
     width: 300px;
 }
 
+form{
+    flex-direction: column;
+}
+
+button {
+       
+    background-color: rgb(247, 244, 50);
+    color: rgb(0, 0, 0);
+    padding: 14px 28px;
+    margin-top: 20px;
+    font-size: 19px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 7%;
+    
+  }
+
+  h2 {
+    background-color: rgb(247, 244, 50);
+    color: rgb(0, 0, 0);
+    padding: 14px 28px;
+    margin: 10px 0;
+    font-size: 19px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 7%;
+  }
+
 #mixed_block{
     height: 200px;
     width: 1200px;
