@@ -98,8 +98,19 @@ function dragEnd(){
     document.getElementById('turnsCounter').innerText = turns;
 }
 
+let time = 300;
 
+let countDownElement = document.getElementById('countdown');
 
+setInterval(updateCountDown,1000);
+function updateCountDown(){
+    let minutes = Math.floor(time/60);
+    let seconds = time % 60;
+    seconds = seconds<10 ? "0" + seconds: seconds;
+    countDownElement.innerHTML = `${minutes}:${seconds}`
+    time--;
+    !time ? alert('Time is up'):''; 
+}
 
 
 // for (let i = 0; i < puzzlePieces.length; i++) {

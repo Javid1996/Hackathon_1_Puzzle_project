@@ -52,6 +52,21 @@ body{
     width: 450px;
 }
 
+P{
+    display: flex;
+    background-color: rgb(247, 244, 50);
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    /* text-align: center; */
+    border-radius: 7%;
+    align-items: center;
+    justify-content: center;
+    border:2px solid black;
+    height: 50px;
+    width: 200px;
+    margin: 20px 0 0 110px;
+}
+
 form{
     flex-direction: column;
 }
