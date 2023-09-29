@@ -4,6 +4,24 @@
 
 
 }
+
+@media screen and (max-width: 2000px){
+    #block {
+        scale: 0.90;
+        margin: 0px !important;
+
+    }
+
+    #mixed_block {
+        scale: 0.96;
+        width: 100% !important;
+    }
+
+    #rules {
+    scale: 0.8;
+    margin-right: -80px;
+    }
+}
 body{
      display: flex; 
     justify-content:space-around;
@@ -15,11 +33,7 @@ body{
     display: flex;
     /* flex-wrap: wrap; */
     flex-direction: column;
-    text-align: center;
-    align-content: center;
-    justify-content: space-between;
-    height: 90vh;
-    width: 70%;
+ 
 
 }
 #block ,#left, #right{

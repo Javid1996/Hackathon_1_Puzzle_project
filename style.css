@@ -4,6 +4,20 @@
 
 
 }
+@media screen and (max-width: 2000px){
+    #block {
+        scale: 0.8;
+        margin-top: 10px;
+        /* margin-top: 5%; */
+    }
+
+    #mixed_block{
+        scale: 0.6;
+        width: 100% !important;
+    }
+
+}
+
 body{
      display: flex; 
     justify-content:space-around;
@@ -17,7 +31,7 @@ body{
     flex-direction: column;
     text-align: center;
     align-content: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 90vh;
     width: 70%;
 
@@ -33,6 +47,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     margin: 20px auto;
+    
 }
 
 #block > img{
@@ -87,7 +102,7 @@ button {
     width: 1200px;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 #mixed_block > img{

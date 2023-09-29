@@ -98,18 +98,24 @@ function dragEnd(){
     document.getElementById('turnsCounter').innerText = turns;
 }
 
-let time = 300;
-
+let time = 3000;
 let countDownElement = document.getElementById('countdown');
+
 
 setInterval(updateCountDown,1000);
 function updateCountDown(){
-    let minutes = Math.floor(time/60);
-    let seconds = time % 60;
-    seconds = seconds<10 ? "0" + seconds: seconds;
-    countDownElement.innerHTML = `${minutes}:${seconds}`
-    time--;
-    !time ? alert('Time is up'):''; 
+
+    if(time >= -1){
+        let minutes = Math.floor(time/60);
+        let seconds = time % 60;
+        seconds = seconds<10 ? "0" + seconds: seconds;
+        time--;
+
+        if(time >= -1){
+            countDownElement.innerHTML = `${minutes}:${seconds}`
+        }
+        time == -2 ? alert('Time is up'):'';
+    } 
 }
 
 

@@ -4,6 +4,19 @@
 
 
 }
+
+@media screen and (max-width: 2000px){
+    #block {
+        scale: 1
+    }
+
+    #mixed_block{
+        scale: 0.8
+    }
+
+
+}
+
 body{
      display: flex; 
     justify-content:space-around;
